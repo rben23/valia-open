@@ -1,4 +1,4 @@
-# 🧭 Valia: Rutas y Deporte al Aire Libre
+# 🧭 Valia: Deporte y Rutas
 
 **Valia** es una aplicación Android diseñada para deportistas y amantes de las actividades al aire libre. Permite descubrir rutas, registrar recorridos y explorar nuevas experiencias de forma sencilla, intuitiva y social.
 
