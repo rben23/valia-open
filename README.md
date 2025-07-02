@@ -1,6 +1,6 @@
 # 🧭 Valia: Deporte y Rutas
 
-**Valia** es una aplicación Android diseñada para deportistas y amantes de las actividades al aire libre. Permite descubrir rutas, registrar recorridos y explorar nuevas experiencias de forma sencilla, intuitiva y social.
+**Valia** es una aplicación Android diseñada para deportistas y amantes de las actividades al aire libre. Permite registrar recorridos y explorar nuevas experiencias de forma sencilla, intuitiva y social.
 
 > 📱 Este proyecto fue realizado como Trabajo de Fin de Grado y obtuvo **Matrícula de Honor** 🎓.
 
@@ -23,7 +23,7 @@
 | Categoría     | Tecnologías                 |
 |---------------|-----------------------------|
 | Lenguaje      | Java                        |
-| BD Remote     | Firebase (Auth + Database)  |
+| BD Remota     | Firebase (Auth + Database)  |
 | BD Local      | SQLite                      |
 | Mapas         | OpenStreetMap               |
 
@@ -37,4 +37,4 @@
 
 ## 🧪 ¿Cómo ejecutar este proyecto?
 
-> ⚙️ Debes vincular Firebase con este proyecto para poder ejecutarlo
+> ⚙️ Debes vincular Firebase con este proyecto para poder ejecutarlo.
