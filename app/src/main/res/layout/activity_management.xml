@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        style="@style/toolbar"
+        android:elevation="@dimen/toolbar_elevation">
+
+        <ImageView
+            android:id="@+id/imgGoBack"
+            style="@style/defaultImage"
+            android:layout_width="@dimen/toolbar_icon_size"
+            android:layout_height="@dimen/toolbar_icon_size"
+            android:layout_marginEnd="@dimen/toolbar_icon_margin"
+            android:contentDescription="@string/cdes_goBackButton"
+            app:srcCompat="@drawable/back_arrow"
+            tools:layout_editor_absoluteX="58dp"
+            tools:layout_editor_absoluteY="58dp" />
+
+        <TextView
+            android:id="@+id/txvFrameTitle"
+            style="@style/titleText"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="clip_horizontal"
+            android:text="@string/txv_showActivity" />
+
+        <ImageView
+            android:id="@+id/imgEditRoute"
+            style="@style/defaultImage"
+            android:layout_width="@dimen/icon_small_size"
+            android:layout_height="@dimen/icon_small_size"
+            android:layout_gravity="end"
+            android:layout_marginEnd="@dimen/icon_margin_right"
+            android:contentDescription="@string/cdes_EditForm"
+            app:srcCompat="@drawable/img_pencil_edit"
+            tools:layout_editor_absoluteX="58dp"
+            tools:layout_editor_absoluteY="58dp" />
+    </androidx.appcompat.widget.Toolbar>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <FrameLayout
+                android:id="@+id/mapManagementFrame"
+                android:layout_width="match_parent"
+                android:layout_height="550dp"
+                android:background="@drawable/corner_radius"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <org.osmdroid.views.MapView
+                    android:id="@+id/routeMapView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:contentDescription="@string/cdes_routeMap" />
+
+            </FrameLayout>
+
+            <View
+                android:id="@+id/infoRouteView"
+                style="@style/defaultView"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/mapManagementFrame" />
+
+            <TextView
+                android:id="@+id/txvRouteTimeTitle"
+                style="@style/normalText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="8dp"
+                android:text="@string/txv_routeTimeTitle"
+                app:layout_constraintStart_toStartOf="@+id/infoRouteView"
+                app:layout_constraintTop_toTopOf="@+id/infoRouteView" />
+
+            <TextView
+                android:id="@+id/txvRouteTime"
+                style="@style/sectionText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:textSize="30sp"
+                app:layout_constraintStart_toStartOf="@+id/txvRouteTimeTitle"
+                app:layout_constraintTop_toBottomOf="@+id/txvRouteTimeTitle" />
+
+            <View
+                android:id="@+id/separator"
+                android:layout_width="1dp"
+                android:layout_height="90dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="@color/barColor"
+                app:layout_constraintBottom_toBottomOf="@+id/infoRouteView"
+                app:layout_constraintEnd_toEndOf="@+id/infoRouteView"
+                app:layout_constraintStart_toStartOf="@+id/infoRouteView"
+                app:layout_constraintTop_toTopOf="@+id/infoRouteView"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <TextView
+                android:id="@+id/txvRouteDistanceTitle"
+                style="@style/normalText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="8dp"
+                android:text="@string/txv_routeDistanceTitle"
+                app:layout_constraintStart_toEndOf="@+id/separator"
+                app:layout_constraintTop_toTopOf="@+id/infoRouteView" />
+
+            <TextView
+                android:id="@+id/txvRouteDistance"
+                style="@style/sectionText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:textSize="30sp"
+                app:layout_constraintStart_toStartOf="@+id/txvRouteDistanceTitle"
+                app:layout_constraintTop_toBottomOf="@+id/txvRouteDistanceTitle" />
+
+            <TextView
+                android:id="@+id/txvRouteDistanceKm"
+                style="@style/normalText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:text="@string/txv_kmText"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toBottomOf="@+id/txvRouteDistance"
+                app:layout_constraintStart_toEndOf="@+id/txvRouteDistance" />
+
+
+            <View
+                android:id="@+id/activityManagementView"
+                style="@style/defaultView"
+                android:layout_height="405dp"
+                android:layout_marginTop="15dp"
+                android:visibility="visible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/infoRouteView" />
+
+            <TextView
+                android:id="@+id/txvRouteInfoTitle"
+                style="@style/sectionText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/txv_Info"
+                app:layout_constraintBottom_toBottomOf="@+id/imgRouteInfoView"
+                app:layout_constraintEnd_toEndOf="@+id/activityManagementView"
+                app:layout_constraintHorizontal_bias="0.03"
+                app:layout_constraintStart_toEndOf="@+id/imgRouteInfoView"
+                app:layout_constraintTop_toTopOf="@+id/imgRouteInfoView" />
+
+            <ImageView
+                android:id="@+id/imgRouteInfoView"
+                style="@style/defaultImage"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="15dp"
+                app:layout_constraintStart_toStartOf="@+id/activityManagementView"
+                app:layout_constraintTop_toTopOf="@+id/activityManagementView"
+                app:srcCompat="@drawable/img_app_info" />
+
+            <TextView
+                android:id="@+id/txvRouteNameProperty"
+                style="@style/normalText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="20dp"
+                android:text="@string/txv_routeName"
+                app:layout_constraintStart_toStartOf="@+id/activityManagementView"
+                app:layout_constraintTop_toBottomOf="@+id/txvRouteInfoTitle" />
+
+            <EditText
+                android:id="@+id/edtRouteNameProperty"
+                style="@style/propertyEditText"
+                android:ems="10"
+                android:enabled="false"
+                android:hint="@string/edt_routeName"
+                android:inputType="text"
+                app:layout_constraintEnd_toEndOf="@+id/activityManagementView"
+                app:layout_constraintStart_toStartOf="@+id/activityManagementView"
+                app:layout_constraintTop_toBottomOf="@+id/txvRouteNameProperty" />
+
+            <TextView
+                android:id="@+id/txvActivityNameProperty"
+                style="@style/normalText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="20dp"
+                android:text="@string/txv_activityName"
+                app:layout_constraintStart_toStartOf="@+id/activityManagementView"
+                app:layout_constraintTop_toBottomOf="@+id/edtRouteNameProperty" />
+
+            <Spinner
+                android:id="@+id/spnActivityNameProperty"
+                style="@style/propertyEditText"
+                android:enabled="false"
+                app:layout_constraintEnd_toEndOf="@+id/activityManagementView"
+                app:layout_constraintStart_toStartOf="@+id/activityManagementView"
+                app:layout_constraintTop_toBottomOf="@+id/txvActivityNameProperty" />
+
+            <TextView
+                android:id="@+id/txvDateProperty"
+                style="@style/normalText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="20dp"
+                android:text="@string/txv_date"
+                app:layout_constraintStart_toStartOf="@+id/activityManagementView"
+                app:layout_constraintTop_toBottomOf="@+id/spnActivityNameProperty" />
+
+            <EditText
+                android:id="@+id/edtDateProperty"
+                style="@style/propertyEditText"
+                android:ems="10"
+                android:enabled="false"
+                android:inputType="datetime"
+                app:layout_constraintEnd_toEndOf="@+id/activityManagementView"
+                app:layout_constraintStart_toStartOf="@+id/activityManagementView"
+                app:layout_constraintTop_toBottomOf="@+id/txvDateProperty" />
+
+            <View
+                android:id="@+id/deleteRouteView"
+                style="@style/defaultView"
+                android:layout_height="180dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="30dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/activityManagementView" />
+
+            <TextView
+                android:id="@+id/txvDelete"
+                style="@style/sectionText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/txv_deleteActivity"
+                app:layout_constraintBottom_toBottomOf="@+id/imgDelete"
+                app:layout_constraintEnd_toEndOf="@+id/deleteRouteView"
+                app:layout_constraintHorizontal_bias="0.03"
+                app:layout_constraintStart_toEndOf="@+id/imgDelete"
+                app:layout_constraintTop_toTopOf="@+id/imgDelete" />
+
+            <ImageView
+                android:id="@+id/imgDelete"
+                style="@style/defaultImage"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="15dp"
+                app:layout_constraintStart_toStartOf="@+id/deleteRouteView"
+                app:layout_constraintTop_toTopOf="@+id/deleteRouteView"
+                app:srcCompat="@drawable/img_app_bin" />
+
+            <Button
+                android:id="@+id/btnDelete"
+                style="@style/basicColorButton"
+                android:text="@string/btn_delete"
+                android:contentDescription="@string/cdes_deleteRoute"
+                app:layout_constraintBottom_toBottomOf="@+id/deleteRouteView"
+                app:layout_constraintEnd_toEndOf="@+id/deleteRouteView"
+                app:layout_constraintStart_toStartOf="@+id/deleteRouteView"
+                app:layout_constraintTop_toBottomOf="@+id/txvDelete"
+                app:layout_constraintVertical_bias="0.68" />
+
+            <Button
+                android:id="@+id/btnSave"
+                style="@style/basicColorButton"
+                android:text="@string/btn_save"
+
+                android:contentDescription="@string/cdes_saveRoute"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.491"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/activityManagementView"
+                app:layout_constraintVertical_bias="0.22000003" />
+
+            <Button
+                android:id="@+id/btnCancel"
+                style="@style/transparentButton"
+                android:layout_marginTop="10dp"
+
+                android:contentDescription="@string/cdes_cancelEditRoute"
+                android:layout_marginBottom="30dp"
+                android:text="@string/btn_cancel"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.492"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btnSave" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</LinearLayout>

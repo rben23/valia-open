@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/homePage"
+        android:icon="@drawable/house_icon"
+        android:title="@string/mnu_titleHome" />
+
+    <item
+        android:id="@+id/activitiesPage"
+        android:icon="@drawable/activities_icon"
+        android:title="@string/mnu_titleActivities" />
+
+    <item
+        android:id="@+id/challengePage"
+        android:icon="@drawable/challenge_icon"
+        android:title="@string/mnu_titleChallenges" />
+
+    <item
+        android:id="@+id/socialPage"
+        android:icon="@drawable/social_icon"
+        android:title="@string/mnu_titleSocial" />
+</menu>

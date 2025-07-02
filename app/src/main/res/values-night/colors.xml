@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#00C4F7</color>
+    <color name="colorPrimaryDark">#00CCD7</color>
+    <color name="colorNavActive">#521B8EF2</color>
+    <color name="colorAccent">#0038A9</color>
+
+    <color name="backgroundColor">#161616</color>
+    <color name="barColor">#1B1B1B</color>
+    <color name="viewColor">#232323</color>
+    <color name="contrastViewColor">#1B1B1B</color>
+    <color name="editPropertyColor">#1F1F1F</color>
+    <color name="messageColor">#232323</color>
+    <color name="dangerColor">#BF2828</color>
+    <color name="colorActivity">#05F258</color>
+</resources>

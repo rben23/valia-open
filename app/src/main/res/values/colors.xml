@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3841F2</color>
+    <color name="colorPrimaryDark">#1e7cd6</color>
+    <color name="colorNavActive">#521B8EF2</color>
+    <color name="colorAccent">#04D976</color>
+
+    <color name="black">#FF000000</color>
+    <color name="dark">#161616</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="transparent">#00000000</color>
+
+    <color name="backgroundColor">#EFEFEF</color>
+    <color name="barColor">#FAFAFA</color>
+    <color name="viewColor">#FFFFFF</color>
+    <color name="contrastViewColor">#EDEDED</color>
+    <color name="editPropertyColor">#E9E9E9</color>
+    <color name="messageColor">#FFFFFF</color>
+    <color name="dangerColor">#BF2828</color>
+    <color name="colorActivity">#00B814</color>
+</resources>

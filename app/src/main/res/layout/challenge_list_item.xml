@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="start"
+    android:orientation="horizontal"
+    android:padding="9dp">
+
+    <ImageView
+        android:id="@+id/challengeIcon"
+        style="@style/defaultImage"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/img_chll_challenge_active"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/challengeName"
+        style="@style/sectionText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        app:layout_constraintBottom_toBottomOf="@+id/challengeIcon"
+        app:layout_constraintStart_toEndOf="@+id/challengeIcon"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/challengeKm"
+        style="@style/normalText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="@+id/challengeName"
+        app:layout_constraintTop_toBottomOf="@+id/challengeName" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

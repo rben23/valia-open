@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".appFragments.ActivitiesFragment">
+
+        <View
+            android:id="@+id/createRouteView"
+            style="@style/defaultView"
+            android:layout_height="200dp"
+            android:layout_marginTop="30dp"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/txvNewRouteTitle"
+            style="@style/sectionText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:text="@string/txv_createNewRoute"
+            app:layout_constraintBottom_toBottomOf="@+id/imgNewRoute"
+            app:layout_constraintStart_toEndOf="@+id/imgNewRoute"
+            app:layout_constraintTop_toTopOf="@+id/imgNewRoute" />
+
+        <ImageView
+            android:id="@+id/imgNewRoute"
+            style="@style/defaultImage"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="15dp"
+            app:layout_constraintStart_toStartOf="@+id/createRouteView"
+            app:layout_constraintTop_toTopOf="@+id/createRouteView"
+            app:srcCompat="@drawable/distance_icon" />
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="170dp"
+
+            android:layout_height="170dp"
+            android:layout_marginEnd="15dp"
+            android:src="@drawable/img_dec_new_route"
+            app:layout_constraintBottom_toBottomOf="@+id/createRouteView"
+            app:layout_constraintEnd_toEndOf="@+id/createRouteView"
+            app:layout_constraintTop_toTopOf="@+id/createRouteView" />
+
+        <Button
+            android:id="@+id/btnStartActivity"
+            style="@style/viewColorButton"
+
+            android:layout_marginEnd="1dp"
+            android:contentDescription="@string/cdes_createNewRoute"
+            android:text="@string/btn_createNewRoute"
+            app:layout_constraintBottom_toBottomOf="@+id/createRouteView"
+            app:layout_constraintEnd_toStartOf="@+id/imageView3"
+            app:layout_constraintStart_toStartOf="@+id/createRouteView"
+            app:layout_constraintTop_toBottomOf="@+id/imgNewRoute"
+            app:layout_constraintVertical_bias="0.7" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/savedActivitiesFrame"
+            style="@style/defaultView"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="30dp"
+            android:minHeight="500dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/createRouteView">
+
+
+            <TextView
+                android:id="@+id/txvSavedActivitiesTitle"
+                style="@style/sectionText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:text="@string/txv_yourRoutes"
+                app:layout_constraintBottom_toBottomOf="@+id/imgSavedActivities"
+                app:layout_constraintStart_toEndOf="@+id/imgSavedActivities"
+                app:layout_constraintTop_toTopOf="@+id/imgSavedActivities" />
+
+            <ImageView
+                android:id="@+id/imgSavedActivities"
+                style="@style/defaultImage"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="15dp"
+                app:layout_constraintStart_toStartOf="@+id/savedActivitiesFrame"
+                app:layout_constraintTop_toTopOf="@+id/savedActivitiesFrame"
+                app:srcCompat="@drawable/img_folder" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerRoutes"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="15dp"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txvSavedActivitiesTitle" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/savedActivitiesEmpty"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txvSavedActivitiesTitle">
+
+                <ImageView
+                    android:id="@+id/imageView4"
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@+id/savedActivitiesEmpty"
+                    app:layout_constraintStart_toStartOf="@+id/savedActivitiesEmpty"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.3"
+                    app:srcCompat="@drawable/img_dec_saved_routes" />
+
+                <TextView
+                    android:id="@+id/txvNoSavedRoutes"
+                    style="@style/subtitleText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/txv_emptyList"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@+id/imageView4"
+                    app:layout_constraintStart_toStartOf="@+id/imageView4"
+                    app:layout_constraintTop_toBottomOf="@+id/imageView4"
+                    app:layout_constraintVertical_bias="0.0" />
+
+                <TextView
+                    android:id="@+id/txvNotyNoSavedRoutes"
+                    style="@style/normalText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/txv_notyNoSavedRoutes"
+                    android:textAlignment="center"
+                    app:layout_constraintBottom_toBottomOf="@+id/savedActivitiesEmpty"
+                    app:layout_constraintEnd_toEndOf="@+id/imageView4"
+                    app:layout_constraintStart_toStartOf="@+id/imageView4"
+                    app:layout_constraintTop_toBottomOf="@+id/txvNoSavedRoutes"
+                    app:layout_constraintVertical_bias="0.13" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

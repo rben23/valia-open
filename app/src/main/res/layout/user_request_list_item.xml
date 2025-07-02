@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="start"
+    android:orientation="horizontal"
+    android:padding="9dp">
+
+    <ImageView
+        android:id="@+id/profileIcon"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="5dp"
+        android:src="@drawable/img_default_user_image"
+        android:contentDescription="@string/cdes_profileImage"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/userName"
+        style="@style/sectionText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        app:layout_constraintBottom_toBottomOf="@+id/profileIcon"
+        app:layout_constraintStart_toEndOf="@+id/profileIcon"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnAccept"
+        style="@style/basicColorButton"
+        android:contentDescription="@string/cdes_acceptFriendRequest"
+
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:text="@string/btn_acceptRequest"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/profileIcon"
+        app:layout_constraintTop_toBottomOf="@+id/profileIcon" />
+
+    <Button
+        android:id="@+id/btnDiscart"
+        style="@style/transparentButton"
+        android:contentDescription="@string/cdes_discardFriendRequest"
+
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="10dp"
+        android:text="@string/btn_discartRequest"
+        app:layout_constraintBottom_toBottomOf="@+id/btnAccept"
+        app:layout_constraintStart_toEndOf="@+id/btnAccept"
+        app:layout_constraintTop_toTopOf="@+id/btnAccept" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

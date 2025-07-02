@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".login.LoginActivity">
+
+        <View
+            android:id="@+id/view2"
+            android:layout_width="match_parent"
+            android:layout_height="900dp"
+            android:background="@color/colorAccent"
+            android:rotation="43"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            style="@style/appLogoImage"
+            android:layout_width="204dp"
+            android:layout_height="60dp"
+
+            android:layout_marginTop="30dp"
+            android:contentDescription="@string/app_name"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/txvTitleRegister"
+            style="@style/titleText"
+            android:layout_marginTop="50dp"
+            android:text="@string/txv_loginHello"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+        <View
+            android:id="@+id/vwDangerLogin"
+            android:layout_width="355dp"
+            android:layout_height="80dp"
+            android:background="@drawable/danger_background"
+            android:visibility="gone"
+
+            app:layout_constraintBottom_toTopOf="@+id/btnLogIn"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/layPassword" />
+
+        <ImageView
+            android:id="@+id/imgDangerLogin"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+
+            app:layout_constraintBottom_toBottomOf="@+id/vwDangerLogin"
+            app:layout_constraintEnd_toStartOf="@+id/txtDangerLogin"
+            app:layout_constraintStart_toStartOf="@+id/vwDangerLogin"
+            app:layout_constraintTop_toTopOf="@+id/vwDangerLogin"
+            app:srcCompat="@drawable/img_app_error">
+
+        </ImageView>
+
+        <TextView
+            android:id="@+id/txtDangerLogin"
+            style="@style/sectionText"
+            android:layout_width="265dp"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:singleLine="false"
+            android:textColor="@color/white"
+
+            app:layout_constraintBottom_toBottomOf="@+id/vwDangerLogin"
+            app:layout_constraintEnd_toEndOf="@+id/vwDangerLogin"
+            app:layout_constraintHorizontal_bias="0.87"
+            app:layout_constraintStart_toStartOf="@+id/vwDangerLogin"
+            app:layout_constraintTop_toTopOf="@+id/vwDangerLogin" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/layEmail"
+            style="@style/inputText"
+
+            android:layout_marginTop="30dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txvTitleRegister">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edtEmail"
+                style="@style/defaultEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/edt_email"
+                android:inputType="textEmailAddress" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/layPassword"
+            style="@style/inputText"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/layEmail"
+            app:passwordToggleEnabled="true"
+            app:passwordToggleTint="@color/colorPrimary">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edtPassword"
+                style="@style/defaultEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/edt_password"
+                android:inputType="textPassword" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/btnLogIn"
+            style="@style/basicColorButton"
+
+            android:contentDescription="@string/cdes_logIn"
+            android:layout_marginTop="30dp"
+            android:text="@string/txv_LogIn"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.491"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/layPassword"
+            app:layout_constraintVertical_bias="0.37" />
+
+        <Button
+            android:id="@+id/btnExit"
+            style="@style/transparentButton"
+
+            android:contentDescription="@string/cdes_GoToWelcomeScreen"
+            android:layout_marginTop="10dp"
+            android:text="@string/btn_exit"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.492"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnLogIn" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:id="@+id/loadingLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/backgroundColor"
+        android:gravity="center"
+        android:visibility="gone">
+
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:indeterminateTint="@color/colorAccent" />
+    </LinearLayout>
+</FrameLayout>

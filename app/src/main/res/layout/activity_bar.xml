@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".NavegationActivity">
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        style="@style/toolbar"
+        android:elevation="@dimen/toolbar_elevation">
+
+        <TextView
+            android:id="@+id/txvFrameTitle"
+            style="@style/titleText"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="clip_horizontal"
+            android:text="@string/mnu_titleHome" />
+    </androidx.appcompat.widget.Toolbar>
+
+    <FrameLayout
+        android:id="@+id/frameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/navBar"
+        android:layout_below="@id/toolbar" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/navBar"
+        style="@style/navBottom"
+        android:layout_alignParentBottom="true"
+        android:animateLayoutChanges="true"
+        app:itemIconSize="27dp"
+        app:labelVisibilityMode="labeled"
+        app:menu="@menu/navegation_bar" />
+
+</RelativeLayout>

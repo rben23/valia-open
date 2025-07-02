@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroundColor"
+    tools:context=".WelcomeActivity">
+
+    <ImageView
+        android:id="@+id/imgLogoValia"
+        style="@style/appLogoImage"
+        android:layout_width="220dp"
+        android:layout_height="84dp"
+        android:contentDescription="@string/start_cdes_ValiaLogo"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.07999998" />
+
+    <Button
+        android:id="@+id/btnRegister"
+        style="@style/basicColorButton"
+        android:text="@string/start_btn_SignIn"
+        android:contentDescription="@string/cdes_goToSingUp"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgLogoValia"
+        app:layout_constraintVertical_bias="0.74" />
+
+    <Button
+        android:id="@+id/btnLogIn"
+        style="@style/transparentButton"
+        android:text="@string/start_txv_LogIn"
+        android:contentDescription="@string/cdes_goToLogIn"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnRegister"
+        app:layout_constraintVertical_bias="0.13999999" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="265dp"
+        android:layout_height="266dp"
+
+        android:contentDescription="@string/start_img_welcome"
+        app:layout_constraintBottom_toTopOf="@+id/btnRegister"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgLogoValia"
+        app:srcCompat="@drawable/img_welcome" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

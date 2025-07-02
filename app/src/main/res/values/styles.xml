@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--  App Logo  -->
+    <style name="appLogoImage">
+        <item name="android:src">@drawable/icono_valia</item>
+        <item name="android:tint">@color/dark</item>
+    </style>
+
+    <!--  Images  -->
+    <style name="defaultImage">
+        <item name="android:tint">@color/black</item>
+    </style>
+
+    <style name="colorActivityImage">
+        <item name="android:tint">@color/colorActivity</item>
+    </style>
+
+    <!--  Images Buttons  -->
+    <style name="defaultImageButton" parent="defaultImage">
+        <item name="android:background">@drawable/corner_radius</item>
+    </style>
+
+    <!--  Buttons  -->
+    <style name="defaultButton">
+        <item name="android:fontFamily">@font/alata</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">68dp</item>
+        <item name="android:layout_marginEnd">20dp</item>
+        <item name="android:layout_marginStart">20dp</item>
+
+        <item name="android:textSize">20sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="basicColorButton" parent="defaultButton">
+        <item name="android:backgroundTint">@color/dark</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:layout_marginEnd">40dp</item>
+        <item name="android:layout_marginStart">40dp</item>
+    </style>
+
+    <style name="viewColorButton" parent="defaultButton">
+        <item name="android:backgroundTint">@color/dark</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:layout_marginEnd">15dp</item>
+        <item name="android:layout_marginStart">15dp</item>
+    </style>
+
+    <style name="mapButton" parent="defaultButton">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:layout_marginEnd">15dp</item>
+        <item name="android:layout_marginStart">15dp</item>
+    </style>
+
+    <style name="transparentButton" parent="defaultButton">
+        <item name="cornerRadius">100dp</item>
+        <item name="strokeWidth">3dp</item>
+        <item name="android:layout_marginEnd">40dp</item>
+        <item name="android:layout_marginStart">40dp</item>
+        <item name="backgroundTint">@color/transparent</item>
+        <item name="strokeColor">@color/dark</item>
+        <item name="android:textColor">@color/dark</item>
+    </style>
+
+    <!--  Text  -->
+    <style name="defaultText">
+        <item name="android:fontFamily">@font/alata</item>
+        <item name="android:textColor">@color/black</item>
+
+
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center</item>
+    </style>
+
+    <style name="titleText" parent="defaultText">
+        <item name="android:textSize">28sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="subtitleText" parent="defaultText">
+        <item name="android:textSize">25sp</item>
+        <item name="android:textStyle">bold|italic</item>
+    </style>
+
+    <style name="sectionText" parent="defaultText">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">22sp</item>
+    </style>
+
+    <style name="normalText" parent="defaultText">
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <!--  EditText  -->
+    <style name="defaultEditText">
+        <item name="android:fontFamily">@font/alata</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:padding">12dp</item>
+        <item name="android:background">@drawable/view_background</item>
+    </style>
+
+    <style name="propertyEditText" parent="defaultEditText">
+        <item name="android:padding">7dp</item>
+        <item name="android:layout_marginTop">5dp</item>
+        <item name="android:layout_marginEnd">15dp</item>
+        <item name="android:layout_marginStart">15dp</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">60dp</item>
+        <item name="android:background">@drawable/edit_property_background</item>
+    </style>
+
+    <style name="inputText">
+        <item name="android:fontFamily">@font/alata</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">20dp</item>
+        <item name="android:layout_marginEnd">15dp</item>
+        <item name="android:layout_marginStart">15dp</item>
+    </style>
+
+    <!--  Views  -->
+    <style name="defaultView">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_marginStart">10dp</item>
+        <item name="android:layout_marginEnd">10dp</item>
+        <item name="android:background">@drawable/view_background</item>
+        <item name="android:padding">10dp</item>
+    </style>
+
+    <style name="welcomeView">
+        <item name="android:layout_width">315dp</item>
+        <item name="android:background">@drawable/welcome_background</item>
+    </style>
+
+    <style name="contrastView">
+        <item name="android:layout_width">380dp</item>
+        <item name="android:background">@color/contrastViewColor</item>
+    </style>
+
+    <!--  Toolbar  -->
+    <style name="toolbar">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:minHeight">?attr/actionBarSize</item>
+        <item name="android:background">@color/barColor</item>
+        <item name="android:theme">@style/Theme.Material3.DynamicColors.Dark</item>
+    </style>
+
+    <!--  NavBottom  -->
+    <style name="navBottom">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="itemIconTint">@color/colorPrimary</item>
+        <item name="itemTextColor">@color/colorPrimary</item>
+        <item name="android:background">@color/barColor</item>
+        <item name="itemActiveIndicatorStyle">@style/App.Custom.Indicator</item>
+    </style>
+
+</resources>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        style="@style/toolbar"
+        android:elevation="@dimen/toolbar_elevation">
+
+        <ImageView
+            android:id="@+id/imgGoBack"
+            style="@style/defaultImage"
+            android:layout_width="@dimen/toolbar_icon_size"
+            android:layout_height="@dimen/toolbar_icon_size"
+            android:layout_marginEnd="@dimen/toolbar_icon_margin"
+            android:contentDescription="@string/cdes_goBackButton"
+            app:srcCompat="@drawable/back_arrow"
+            tools:layout_editor_absoluteX="58dp"
+            tools:layout_editor_absoluteY="58dp" />
+
+
+        <TextView
+            android:id="@+id/txvFrameTitle"
+            style="@style/titleText"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="clip_horizontal"
+            android:text="@string/mnu_titleNewRoute" />
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:context=".appFragments.HomeFragment">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/showActivities"
+                style="@style/defaultView"
+                android:layout_height="wrap_content"
+
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="30dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</LinearLayout>

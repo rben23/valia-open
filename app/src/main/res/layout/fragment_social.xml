@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".appFragments.SocialFragment">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/friendsFrame"
+            style="@style/defaultView"
+            android:layout_height="match_parent"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="30dp"
+            android:minHeight="650dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+
+            <TextView
+                android:id="@+id/txvYourChatsTitle"
+                style="@style/sectionText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:text="@string/txv_yourChats"
+                app:layout_constraintBottom_toBottomOf="@+id/imgYourChats"
+                app:layout_constraintStart_toEndOf="@+id/imgYourChats"
+                app:layout_constraintTop_toTopOf="@+id/imgYourChats" />
+
+            <ImageView
+                android:id="@+id/imgYourChats"
+                style="@style/defaultImage"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="15dp"
+                app:layout_constraintStart_toStartOf="@+id/friendsFrame"
+                app:layout_constraintTop_toTopOf="@+id/friendsFrame"
+                app:srcCompat="@drawable/img_app_your_chats" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerFriends"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="15dp"
+                android:visibility="gone"
+                android:contentDescription="@string/cdes_friendsChats"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txvYourChatsTitle" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/friendsListEmpty"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txvYourChatsTitle">
+
+                <ImageView
+                    android:id="@+id/imgNoFriends"
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@+id/friendsListEmpty"
+                    app:layout_constraintStart_toStartOf="@+id/friendsListEmpty"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.3"
+                    app:srcCompat="@drawable/img_dec_no_chat" />
+
+                <TextView
+                    android:id="@+id/txvNoFriends"
+                    style="@style/subtitleText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/txv_emptyList"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@+id/imgNoFriends"
+                    app:layout_constraintStart_toStartOf="@+id/imgNoFriends"
+                    app:layout_constraintTop_toBottomOf="@+id/imgNoFriends"
+                    app:layout_constraintVertical_bias="0.0" />
+
+                <TextView
+                    android:id="@+id/txvNotyNoFriends"
+                    style="@style/normalText"
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/txv_notyNoChats"
+                    android:textAlignment="center"
+                    app:layout_constraintBottom_toBottomOf="@+id/friendsListEmpty"
+                    app:layout_constraintEnd_toEndOf="@+id/imgNoFriends"
+                    app:layout_constraintStart_toStartOf="@+id/imgNoFriends"
+                    app:layout_constraintTop_toBottomOf="@+id/txvNoFriends"
+                    app:layout_constraintVertical_bias="0.13" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

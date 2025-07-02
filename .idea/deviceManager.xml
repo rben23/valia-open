@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DeviceTable">
+    <option name="collapsedNodes">
+      <list>
+        <CategoryListState>
+          <option name="categories">
+            <list>
+              <CategoryState>
+                <option name="attribute" value="Type" />
+                <option name="value" value="Remote" />
+              </CategoryState>
+            </list>
+          </option>
+        </CategoryListState>
+      </list>
+    </option>
+    <option name="groupByAttributes">
+      <list>
+        <option value="Type" />
+      </list>
+    </option>
+  </component>
+</project>

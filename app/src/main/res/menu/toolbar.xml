@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/toolbarProfileImage"
+        android:icon="@drawable/img_default_user_image"
+        android:title="@string/toolbar_userProfile"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/toolbarSearchUsers"
+        android:icon="@drawable/img_app_search"
+        android:title="@string/toolbar_searchUsers"
+        app:showAsAction="always" />
+</menu>

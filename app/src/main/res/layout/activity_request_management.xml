@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        style="@style/toolbar"
+        android:elevation="@dimen/toolbar_elevation">
+
+        <ImageView
+            android:id="@+id/imgGoBack"
+            style="@style/defaultImage"
+            android:layout_width="@dimen/toolbar_icon_size"
+            android:layout_height="@dimen/toolbar_icon_size"
+            android:layout_marginEnd="@dimen/toolbar_icon_margin"
+            app:srcCompat="@drawable/back_arrow"
+            android:contentDescription="@string/cdes_goBackButton"
+            tools:layout_editor_absoluteX="58dp"
+            tools:layout_editor_absoluteY="58dp" />
+
+        <TextView
+            android:id="@+id/txvFrameTitle"
+            style="@style/titleText"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="clip_horizontal"
+            android:text="@string/mnu_titleSocialSpace" />
+    </androidx.appcompat.widget.Toolbar>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:context=".managements.RequestManagement">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/searchUsersFrame"
+                style="@style/defaultView"
+                android:layout_height="match_parent"
+                android:layout_marginTop="30dp"
+                android:minHeight="400dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/txvSearchUsersTitle"
+                    style="@style/sectionText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:text="@string/txv_searchUsers"
+                    app:layout_constraintBottom_toBottomOf="@+id/imgSearchUsers"
+                    app:layout_constraintStart_toEndOf="@+id/imgSearchUsers"
+                    app:layout_constraintTop_toTopOf="@+id/imgSearchUsers" />
+
+                <ImageView
+                    android:id="@+id/imgSearchUsers"
+                    style="@style/defaultImage"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="15dp"
+                    app:layout_constraintStart_toStartOf="@+id/searchUsersFrame"
+                    app:layout_constraintTop_toTopOf="@+id/searchUsersFrame"
+                    app:srcCompat="@drawable/img_app_search" />
+
+                <EditText
+                    android:id="@+id/edtSearchUsers"
+                    style="@style/propertyEditText"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:ems="10"
+                    android:hint="@string/edt_searchUsers"
+                    android:inputType="text"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txvSearchUsersTitle" />
+
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerUsers"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="15dp"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/edtSearchUsers" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/searchUsersEmpty"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_marginTop="10dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/edtSearchUsers">
+
+                    <ImageView
+                        android:id="@+id/imgUsersEmpty"
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="@+id/searchUsersEmpty"
+                        app:layout_constraintStart_toStartOf="@+id/searchUsersEmpty"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.3"
+                        app:srcCompat="@drawable/img_dec_no_users" />
+
+                    <TextView
+                        android:id="@+id/txvNoUsers"
+                        style="@style/subtitleText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/txv_emptyListAlt"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="@+id/imgUsersEmpty"
+                        app:layout_constraintStart_toStartOf="@+id/imgUsersEmpty"
+                        app:layout_constraintTop_toBottomOf="@+id/imgUsersEmpty"
+                        app:layout_constraintVertical_bias="0.0" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <!--    === *** ===    -->
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/requestsFrame"
+                style="@style/defaultView"
+                android:layout_height="match_parent"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="30dp"
+                android:minHeight="450dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/searchUsersFrame">
+
+
+                <TextView
+                    android:id="@+id/txvRequestTitle"
+                    style="@style/sectionText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:text="@string/txv_requestTitle"
+                    app:layout_constraintBottom_toBottomOf="@+id/imgYourRequest"
+                    app:layout_constraintStart_toEndOf="@+id/imgYourRequest"
+                    app:layout_constraintTop_toTopOf="@+id/imgYourRequest" />
+
+                <ImageView
+                    android:id="@+id/imgYourRequest"
+                    style="@style/defaultImage"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="15dp"
+                    app:layout_constraintStart_toStartOf="@+id/requestsFrame"
+                    app:layout_constraintTop_toTopOf="@+id/requestsFrame"
+                    app:srcCompat="@drawable/img_app_request" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerRequest"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="15dp"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txvRequestTitle" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/requestsEmpty"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txvRequestTitle">
+
+                    <ImageView
+                        android:id="@+id/imgRequestEmpty"
+                        android:layout_width="200dp"
+                        android:layout_height="200dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="@+id/requestsEmpty"
+                        app:layout_constraintStart_toStartOf="@+id/requestsEmpty"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.19999999"
+                        app:srcCompat="@drawable/img_dec_no_request" />
+
+                    <TextView
+                        android:id="@+id/txvNoRequests"
+                        style="@style/subtitleText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/txv_emptyList"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="@+id/imgRequestEmpty"
+                        app:layout_constraintStart_toStartOf="@+id/imgRequestEmpty"
+                        app:layout_constraintTop_toBottomOf="@+id/imgRequestEmpty"
+                        app:layout_constraintVertical_bias="0.0" />
+
+                    <TextView
+                        android:id="@+id/txvNotyNoRequests"
+                        style="@style/normalText"
+                        android:layout_width="300dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/txv_notyNoRequest"
+                        android:textAlignment="center"
+                        app:layout_constraintBottom_toBottomOf="@+id/requestsEmpty"
+                        app:layout_constraintEnd_toEndOf="@+id/imgRequestEmpty"
+                        app:layout_constraintStart_toStartOf="@+id/imgRequestEmpty"
+                        app:layout_constraintTop_toBottomOf="@+id/txvNoRequests"
+                        app:layout_constraintVertical_bias="0.13" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</LinearLayout>

@@ -1,0 +1,223 @@
+<resources>
+    <!--  App Name  -->
+    <string name="app_name">Valia</string>
+
+    <!--  Welcome View  -->
+    <string name="start_cdes_ValiaLogo">Valia Logo</string>
+    <string name="start_btn_SignIn">Sign Up</string>
+    <string name="start_txv_LogIn">I already have an account!</string>
+    <string name="start_img_welcome">Welcome image</string>
+
+    <!--  Login & Register  -->
+    <string name="txv_LogIn">Log In</string>
+    <string name="txv_registerNewAccount">Create an account</string>
+    <string name="edt_user">User</string>
+    <string name="edt_name">Name</string>
+    <string name="edt_email">Email</string>
+    <string name="edt_password">Password</string>
+    <string name="btn_exit">Exit</string>
+    <string name="txv_loginHello">Log in</string>
+    <string name="txv_incompleteFields">Incomplete fields</string>
+    <string name="txv_userAlreadyExists">The user already exists</string>
+    <string name="txv_incorrectUserPassword">Incorrect username and/or password</string>
+    <string name="txv_userDoesNotExist">The user does not exist</string>
+    <string name="txv_logOut">Log Out</string>
+    <string name="btn_logOut">Log Out</string>
+    <string name="txv_ErrorRegisteringUser">Error registering user</string>
+    <string name="txv_insecurePassword">The password is too short or insecure</string>
+    <string name="txv_invalidEmail">The email is invalid</string>
+
+    <!--  Fragments Menus  -->
+    <string name="mnu_titleHome">Home</string>
+    <string name="mnu_titleChallenges">Challenges</string>
+    <string name="mnu_titleActivities">Activities</string>
+    <string name="mnu_titleSocial">Social</string>
+
+    <!--  Home Fragment  -->
+    <string name="txv_winChallengesWeek">Challenges won this week</string>
+    <string name="txv_defaultCountValue">0</string>
+    <string name="txv_activeChallenges">Active challenges</string>
+    <string name="txv_thisWeek">This week</string>
+    <string name="txv_hsText">Hs</string>
+
+    <!--  Profile Management  -->
+    <string name="toolbar_userProfile">Profile</string>
+    <string name="mnu_titleProfile">Profile</string>
+
+    <string name="txv_accountSettingsTitle">Account</string>
+    <string name="txv_settingsTitle">Settings</string>
+
+    <string name="accountUserName">[User ID]</string>
+    <string name="accountMail">[Email]</string>
+    <string name="accountName">[Name]</string>
+
+    <string name="btn_save">Save</string>
+    <string name="btn_cancel">Cancel</string>
+
+    <string name="recordSaved">Changes saved</string>
+    <string name="recordNotSaved">Could not be saved</string>
+    <string name="fieldsRequired">Incomplete fields</string>
+
+    <!--  Activity Fragment  -->
+    <string name="mnu_titleNewRoute">New Route</string>
+
+    <string name="txv_createNewRoute">New Route</string>
+    <string name="txv_yourRoutes">Your Routes</string>
+
+    <string name="btn_createNewRoute">Let\'s go!</string>
+    <string name="txv_notyNoSavedRoutes">Your routes will appear here. What are you waiting for?</string>
+
+    <!--  List routes  -->
+    <string name="list_routeWalk">Walk</string>
+    <string name="list_routeHiking">Hiking</string>
+    <string name="list_routeRunning">Running</string>
+    <string name="list_routeCycling">Cycling</string>
+    <string name="list_routeMountainBike">Mountain Biking</string>
+    <string name="list_routeHorseRiding">Horse Riding</string>
+    <string name="list_routeSkating">Skating</string>
+    <string name="list_routeRafting">Rafting</string>
+    <string name="list_routeKayak">Kayaking</string>
+    <string name="list_routeMix">Mixed</string>
+
+    <!--  Routes  -->
+    <string name="btn_startRoute">START</string>
+    <string name="btn_finishRoute">FINISH</string>
+
+    <string name="txv_routeTime">Time</string>
+    <string name="txv_routeTimeTitle">Time</string>
+    <string name="txv_routeDistanceTitle">Distance</string>
+    <string name="txv_defaultKmRouteValue">0.00</string>
+    <string name="txv_kmText">Km</string>
+    <string name="txv_MetersText">m</string>
+
+    <string name="txv_saveRoute">Save Route</string>
+    <string name="edt_routeName">Route Name</string>
+    <string name="txv_recommendationStretch">Remember to hydrate and stretch</string>
+
+    <string name="sch_normalMode">Normal Mode</string>
+    <string name="sch_landscapeMode">Landscape Mode</string>
+    <string name="txv_landscapeMode">Landscape Mode</string>
+    <string name="txv_detailLandscapeMode">Landscape mode is ideal for focusing on the scenery and disconnecting from the digital world.</string>
+
+    <string name="btn_delete">Delete</string>
+    <string name="txv_deleteActivity">Delete Activity</string>
+
+    <!--  Route Management  -->
+    <string name="mnu_routeManagement">Manage Route</string>
+    <string name="txv_Info">Information</string>
+
+    <string name="txv_routeName">Route Name</string>
+    <string name="txv_activityName">Activity Name</string>
+    <string name="txv_date">Date</string>
+
+    <string name="txv_showActivity">View Activity</string>
+    <string name="txv_editActivity">Edit Activity</string>
+
+    <!--  Social Fragment  -->
+    <string name="toolbar_searchUsers">Search friends</string>
+    <string name="txv_searchUsers">Search users</string>
+    <string name="edt_searchUsers">Search by username</string>
+
+    <string name="txv_yourChats">Your chats</string>
+    <string name="mnu_titleSocialSpace">Your social space</string>
+
+    <string name="mnu_titleEditProfile">Edit profile</string>
+
+    <string name="txv_emptyList">Nothing here!</string>
+    <string name="txv_emptyListAlt">This is empty!</string>
+    <string name="txv_notyNoChats">Oops… Looks like you have no chats… Add some friends and start talking!</string>
+    <string name="txv_notyNoRequest">You have no friend requests at the moment. They will appear here when you receive some.</string>
+
+    <string name="txv_requestTitle">Friend requests</string>
+    <string name="btn_sendRequest">Send request</string>
+    <string name="btn_requestPending">Pending...</string>
+    <string name="btn_acceptRequest">Accept</string>
+    <string name="btn_discartRequest">Reject</string>
+    <string name="btn_requestAccepted">You\'re friends</string>
+
+    <string name="edt_writeMessage">Write a message</string>
+    <string name="mnu_titleSelectSendRoute">Select route</string>
+
+    <!--  Challenges  -->
+    <string name="txv_createNewChallenge">New challenge</string>
+    <string name="btn_createNewChallenge">Challenge!</string>
+    <string name="txv_yourChallenges">Your challenges</string>
+
+    <string name="txv_notyNoSavedChallenges">All your challenges will appear here. Start by creating a new one!</string>
+    <string name="mnu_titleNewChallenge">New challenge</string>
+    <string name="edt_NameChallenge">Challenge name</string>
+    <string name="edt_kmChallenge">Distance in Km</string>
+    <string name="txv_kmChallenge">Distance</string>
+    <string name="edt_timeChallenge">Challenge end date</string>
+
+    <string name="edt_userChallenge">Challenge a user</string>
+    <string name="txv_challengeTitle">Challenge details</string>
+    <string name="edt_clickSelectDateChallenge">Tap to select a date...</string>
+    <string name="btn_startChallenge">Challenge</string>
+    <string name="txv_showChallenge">View challenge</string>
+    <string name="txv_deleteChallenge">Delete challenge</string>
+    <string name="txv_editChallenge">Edit challenge</string>
+    <string name="edt_dateChallenge">Start date</string>
+
+    <!--  APP Texts  -->
+    <string name="unknownUser">Unknown user</string>
+    <string name="selfChallenge">Personal challenge</string>
+    <string name="withoutFriendsChallenge">Add friends to challenge</string>
+
+    <!--  Alerts  -->
+    <string name="titleAlert">WATCH OUT!</string>
+    <string name="alertMessageChallenges">Are you sure you want to delete this challenge?</string>
+    <string name="alertMessageActivity">Are you sure you want to delete this activity?</string>
+    <string name="btn_accionAlert">Delete</string>
+    <string name="btn_cancelAlert">Cancel</string>
+
+    <!--  Toasts  -->
+    <string name="tst_routeSaved">Route saved</string>
+    <string name="tst_requestRejected">Request rejected</string>
+    <string name="tst_routeSended">Route sent</string>
+    <string name="tst_incompleteFields">Incomplete fields</string>
+    <string name="tst_permissionRequest">Permissions are required to use the app</string>
+    <string name="tst_emptyFriendsList">Empty friends list</string>
+    <string name="tst_requestSent">Request sent</string>
+    <string name="tst_ErrorSendingRequest">Error sending request</string>
+    <string name="tst_ProcesingRoute">We are processing your route...</string>
+    <string name="tst_ProcesingRouteError">Error processing your route</string>
+
+    <!-- Content Descriptions (For screen readers) -->
+    <string name="cdes_MessagesList">List with all messages</string>
+    <string name="cdes_SendMessage">Button to send the message</string>
+    <string name="cdes_SendRoute">Button to send a route</string>
+    <string name="cdes_EditForm">Button to edit the form</string>
+    <string name="cdes_WriteChallengeName">Text box for the challenge name</string>
+    <string name="cdes_goBackButton">Button to go back</string>
+    <string name="cdes_deleteChallenge">Button to delete the challenge</string>
+    <string name="cdes_saveChallenge">Button to save the challenge</string>
+    <string name="cdes_cancelEditChallenge">Button to cancel challenge editing</string>
+    <string name="cdes_logIn">Button to log in</string>
+    <string name="cdes_GoToWelcomeScreen">Button to go to the welcome screen</string>
+    <string name="cdes_routeMap">Route map</string>
+    <string name="cdes_deleteRoute">Button to delete the route</string>
+    <string name="cdes_saveRoute">Button to save the route</string>
+    <string name="cdes_cancelEditRoute">Button to cancel route editing</string>
+    <string name="cdes_switchLandscape">Switch to enable landscape mode</string>
+    <string name="cdes_startFinishRoute">Button to start or finish the route</string>
+    <string name="cdes_startChallenge">Button to start the challenge</string>
+    <string name="cdes_cancelChallenge">Button to cancel the challenge</string>
+    <string name="cdes_profileImage">User profile picture</string>
+    <string name="cdes_editProfileImage">Edit user profile picture</string>
+    <string name="cdes_logOut">Button to log out</string>
+    <string name="cdes_saveProfile">Button to save the profile</string>
+    <string name="cdes_cancelEditProfile">Button to cancel profile editing</string>
+    <string name="cdes_singUpButton">Button to sign up</string>
+    <string name="cdes_searchUsers">Search users</string>
+    <string name="cdes_saveNewRoute">Button to save the new route</string>
+    <string name="cdes_cancelNewRoute">Button to cancel saving the new route</string>
+    <string name="cdes_requestStatus">Button for request status</string>
+    <string name="cdes_goToSingUp">Button to go to the registration screen</string>
+    <string name="cdes_goToLogIn">Button to go to the login screen</string>
+    <string name="cdes_goToCreateChallenge">Button to go to the challenge creation screen</string>
+    <string name="cdes_createNewRoute">Button to create a new route</string>
+    <string name="cdes_friendsChats">Friends\' chats</string>
+    <string name="cdes_acceptFriendRequest">Button to accept the friend request</string>
+    <string name="cdes_discardFriendRequest">Button to reject the friend request</string>
+</resources>

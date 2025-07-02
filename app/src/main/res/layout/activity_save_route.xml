@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".managements.mapsManagements.SaveRoute">
+
+
+    <View
+        android:id="@+id/saveRouteView"
+        style="@style/defaultView"
+        android:layout_width="match_parent"
+        android:layout_height="700dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/txvSaveRouteTitle"
+        style="@style/sectionText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/txv_saveRoute"
+        app:layout_constraintBottom_toBottomOf="@+id/imgSaveRouteView"
+        app:layout_constraintEnd_toEndOf="@+id/saveRouteView"
+        app:layout_constraintHorizontal_bias="0.03"
+        app:layout_constraintStart_toEndOf="@+id/imgSaveRouteView"
+        app:layout_constraintTop_toTopOf="@+id/imgSaveRouteView" />
+
+    <ImageView
+        android:id="@+id/imgSaveRouteView"
+        style="@style/defaultImage"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        app:layout_constraintStart_toStartOf="@+id/saveRouteView"
+        app:layout_constraintTop_toTopOf="@+id/saveRouteView"
+        app:srcCompat="@drawable/img_save" />
+
+
+    <EditText
+        android:id="@+id/edtRouteNameProperty"
+        style="@style/propertyEditText"
+        android:layout_width="350dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:hint="@string/edt_routeName"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="@+id/saveRouteView"
+        app:layout_constraintStart_toStartOf="@+id/saveRouteView"
+        app:layout_constraintTop_toBottomOf="@+id/txvSaveRouteTitle" />
+
+    <ImageView
+        android:id="@+id/imgHydrate"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        app:layout_constraintBottom_toTopOf="@+id/btnSaveRoute"
+        app:layout_constraintEnd_toEndOf="@+id/saveRouteView"
+        app:layout_constraintStart_toStartOf="@+id/saveRouteView"
+        app:layout_constraintTop_toBottomOf="@+id/edtRouteNameProperty"
+        app:layout_constraintVertical_bias="0.26"
+        app:srcCompat="@drawable/img_dec_hydrate" />
+
+    <TextView
+        android:id="@+id/txvRecommendationStretch"
+        style="@style/sectionText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/txv_recommendationStretch"
+        app:layout_constraintBottom_toTopOf="@+id/btnSaveRoute"
+        app:layout_constraintEnd_toEndOf="@+id/saveRouteView"
+        app:layout_constraintStart_toStartOf="@+id/saveRouteView"
+        app:layout_constraintTop_toBottomOf="@+id/imgHydrate"
+        app:layout_constraintVertical_bias="0.31" />
+
+    <Button
+        android:id="@+id/btnSaveRoute"
+        style="@style/basicColorButton"
+
+        android:layout_marginBottom="10dp"
+        android:text="@string/btn_save"
+        android:contentDescription="@string/cdes_saveNewRoute"
+        app:layout_constraintBottom_toTopOf="@+id/btnExit"
+        app:layout_constraintEnd_toEndOf="@+id/saveRouteView"
+        app:layout_constraintStart_toStartOf="@+id/saveRouteView" />
+
+    <Button
+        android:id="@+id/btnExit"
+        style="@style/transparentButton"
+
+        android:layout_marginBottom="15dp"
+        android:text="@string/btn_cancel"
+        android:contentDescription="@string/cdes_cancelNewRoute"
+        app:layout_constraintBottom_toBottomOf="@+id/saveRouteView"
+        app:layout_constraintEnd_toEndOf="@+id/saveRouteView"
+        app:layout_constraintStart_toStartOf="@+id/saveRouteView" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

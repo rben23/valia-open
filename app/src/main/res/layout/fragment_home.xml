@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".appFragments.HomeFragment">
+
+        <View
+            android:id="@+id/UserView"
+            style="@style/defaultView"
+            android:layout_height="150dp"
+            android:layout_marginTop="30dp"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <ImageView
+            android:id="@+id/imgKmWeek"
+            android:layout_width="125dp"
+            android:layout_height="125dp"
+            android:layout_marginStart="10dp"
+            android:src="@drawable/img_deco_km_week"
+            app:layout_constraintBottom_toBottomOf="@+id/UserView"
+            app:layout_constraintStart_toStartOf="@+id/UserView"
+            app:layout_constraintTop_toTopOf="@+id/UserView" />
+
+        <TextView
+            android:id="@+id/txvKmWeek"
+            style="@style/titleText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text="@string/txv_defaultCountValue"
+            android:textSize="55sp"
+            app:layout_constraintStart_toEndOf="@+id/imgKmWeek"
+            app:layout_constraintTop_toTopOf="@+id/imgKmWeek" />
+
+        <TextView
+            android:id="@+id/txvKmWeekText"
+            style="@style/subtitleText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginBottom="5dp"
+            android:text="@string/txv_kmText"
+            android:textSize="30sp"
+            app:layout_constraintBottom_toBottomOf="@+id/txvKmWeek"
+            app:layout_constraintStart_toEndOf="@+id/txvKmWeek" />
+
+        <TextView
+            android:id="@+id/txvKmThisWeek"
+            style="@style/normalText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/txv_thisWeek"
+            app:layout_constraintStart_toStartOf="@+id/txvKmWeek"
+            app:layout_constraintTop_toBottomOf="@+id/txvKmWeek" />
+
+        <View
+            android:id="@+id/ChallengeCountView"
+            style="@style/defaultView"
+            android:layout_height="150dp"
+            android:layout_marginTop="15dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/UserView" />
+
+        <TextView
+            android:id="@+id/txvHoursWeek"
+            style="@style/titleText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text="@string/txv_defaultCountValue"
+            android:textSize="55sp"
+            app:layout_constraintStart_toEndOf="@+id/imgTimeWeek"
+            app:layout_constraintTop_toTopOf="@+id/imgTimeWeek" />
+
+        <TextView
+            android:id="@+id/txvHoursWeekText"
+            style="@style/subtitleText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginBottom="5dp"
+            android:text="@string/txv_hsText"
+            android:textSize="30sp"
+            app:layout_constraintBottom_toBottomOf="@+id/txvHoursWeek"
+            app:layout_constraintStart_toEndOf="@+id/txvHoursWeek" />
+
+        <TextView
+            android:id="@+id/txvHoursThisWeek"
+            style="@style/normalText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/txv_thisWeek"
+            app:layout_constraintStart_toStartOf="@+id/txvHoursWeek"
+            app:layout_constraintTop_toBottomOf="@+id/txvHoursWeek" />
+
+
+        <ImageView
+            android:id="@+id/imgTimeWeek"
+            android:layout_width="125dp"
+            android:layout_height="125dp"
+            android:layout_marginStart="10dp"
+            android:src="@drawable/img_deco_time_week"
+            app:layout_constraintBottom_toBottomOf="@+id/ChallengeCountView"
+            app:layout_constraintStart_toStartOf="@+id/ChallengeCountView"
+            app:layout_constraintTop_toTopOf="@+id/ChallengeCountView" />
+
+        <View
+            android:id="@+id/DistanceCountView"
+            style="@style/defaultView"
+            android:layout_height="150dp"
+            android:layout_marginTop="15dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ChallengeCountView" />
+
+        <TextView
+            android:id="@+id/txvChallengesActive"
+            style="@style/titleText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text="@string/txv_defaultCountValue"
+            android:textSize="55sp"
+            app:layout_constraintStart_toEndOf="@+id/imgChallengesActive"
+            app:layout_constraintTop_toTopOf="@+id/imgChallengesActive" />
+
+        <TextView
+            android:id="@+id/txvChallengesActiveText"
+            style="@style/normalText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/txv_activeChallenges"
+            app:layout_constraintStart_toStartOf="@+id/txvChallengesActive"
+            app:layout_constraintTop_toBottomOf="@+id/txvChallengesActive" />
+
+
+        <ImageView
+            android:id="@+id/imgChallengesActive"
+            android:layout_width="125dp"
+            android:layout_height="125dp"
+            android:layout_marginStart="10dp"
+            android:src="@drawable/img_dec_active_challenge"
+            app:layout_constraintBottom_toBottomOf="@+id/DistanceCountView"
+            app:layout_constraintStart_toStartOf="@+id/DistanceCountView"
+            app:layout_constraintTop_toTopOf="@+id/DistanceCountView" />
+
+        <View
+            android:id="@+id/WinChallengeView"
+            style="@style/defaultView"
+            android:layout_height="150dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="30dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/DistanceCountView" />
+
+        <TextView
+            android:id="@+id/txvChallengesWin"
+            style="@style/titleText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text="@string/txv_defaultCountValue"
+            android:textSize="55sp"
+            app:layout_constraintStart_toEndOf="@+id/imgChallengesWin"
+            app:layout_constraintTop_toTopOf="@+id/imgChallengesWin" />
+
+        <TextView
+            android:id="@+id/txvChallengesWinText"
+            style="@style/normalText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/txv_winChallengesWeek"
+            app:layout_constraintStart_toStartOf="@+id/txvChallengesWin"
+            app:layout_constraintTop_toBottomOf="@+id/txvChallengesWin" />
+
+
+        <ImageView
+            android:id="@+id/imgChallengesWin"
+            android:layout_width="125dp"
+            android:layout_height="125dp"
+            android:layout_marginStart="10dp"
+            android:src="@drawable/img_dec_win_challenge"
+            app:layout_constraintBottom_toBottomOf="@+id/WinChallengeView"
+            app:layout_constraintStart_toStartOf="@+id/WinChallengeView"
+            app:layout_constraintTop_toTopOf="@+id/WinChallengeView" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

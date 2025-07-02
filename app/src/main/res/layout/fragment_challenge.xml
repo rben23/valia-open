@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".appFragments.ActivitiesFragment">
+
+        <View
+            android:id="@+id/createChallengeView"
+            style="@style/defaultView"
+            android:layout_height="200dp"
+            android:layout_marginTop="30dp"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/txvNewChallengeTitle"
+            style="@style/sectionText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:text="@string/txv_createNewChallenge"
+            app:layout_constraintBottom_toBottomOf="@+id/imgNewChallenge"
+            app:layout_constraintStart_toEndOf="@+id/imgNewChallenge"
+            app:layout_constraintTop_toTopOf="@+id/imgNewChallenge" />
+
+        <ImageView
+            android:id="@+id/imgNewChallenge"
+            style="@style/defaultImage"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="15dp"
+            app:layout_constraintStart_toStartOf="@+id/createChallengeView"
+            app:layout_constraintTop_toTopOf="@+id/createChallengeView"
+            app:srcCompat="@drawable/challenge_icon" />
+
+        <ImageView
+            android:id="@+id/imgDecChallenge"
+            android:layout_width="170dp"
+
+            android:layout_height="170dp"
+            android:layout_marginEnd="10dp"
+            android:src="@drawable/img_dec_new_challenge"
+            app:layout_constraintBottom_toBottomOf="@+id/createChallengeView"
+            app:layout_constraintEnd_toEndOf="@+id/createChallengeView"
+            app:layout_constraintTop_toTopOf="@+id/createChallengeView" />
+
+        <Button
+            android:id="@+id/btnNewChallenge"
+            style="@style/viewColorButton"
+
+            android:layout_marginEnd="1dp"
+            android:text="@string/btn_createNewChallenge"
+            android:contentDescription="@string/cdes_goToCreateChallenge"
+            app:layout_constraintBottom_toBottomOf="@+id/createChallengeView"
+            app:layout_constraintEnd_toStartOf="@+id/imgDecChallenge"
+            app:layout_constraintStart_toStartOf="@+id/createChallengeView"
+            app:layout_constraintTop_toBottomOf="@+id/imgNewChallenge"
+            app:layout_constraintVertical_bias="0.7" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/savedChallengesFrame"
+            style="@style/defaultView"
+            android:layout_height="500dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="30dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/createChallengeView">
+
+
+            <TextView
+                android:id="@+id/txvSavedChallengesTitle"
+                style="@style/sectionText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:text="@string/txv_yourChallenges"
+                app:layout_constraintBottom_toBottomOf="@+id/imgSavedChallenges"
+                app:layout_constraintStart_toEndOf="@+id/imgSavedChallenges"
+                app:layout_constraintTop_toTopOf="@+id/imgSavedChallenges" />
+
+            <ImageView
+                android:id="@+id/imgSavedChallenges"
+                style="@style/defaultImage"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="15dp"
+                app:layout_constraintStart_toStartOf="@+id/savedChallengesFrame"
+                app:layout_constraintTop_toTopOf="@+id/savedChallengesFrame"
+                app:srcCompat="@drawable/img_folder" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerChallenges"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="15dp"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txvSavedChallengesTitle" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/savedChallengesEmpty"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txvSavedChallengesTitle">
+
+                <ImageView
+                    android:id="@+id/imgDecChallengesEmpty"
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@+id/savedChallengesEmpty"
+                    app:layout_constraintStart_toStartOf="@+id/savedChallengesEmpty"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.3"
+                    app:srcCompat="@drawable/img_dec_saved_challenges" />
+
+                <TextView
+                    android:id="@+id/txvNoSavedChallenges"
+                    style="@style/subtitleText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/txv_emptyList"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@+id/imgDecChallengesEmpty"
+                    app:layout_constraintStart_toStartOf="@+id/imgDecChallengesEmpty"
+                    app:layout_constraintTop_toBottomOf="@+id/imgDecChallengesEmpty"
+                    app:layout_constraintVertical_bias="0.0" />
+
+                <TextView
+                    android:id="@+id/txvNotyNoSavedChallenges"
+                    style="@style/normalText"
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/txv_notyNoSavedChallenges"
+                    android:textAlignment="center"
+                    app:layout_constraintBottom_toBottomOf="@+id/savedChallengesEmpty"
+                    app:layout_constraintEnd_toEndOf="@+id/imgDecChallengesEmpty"
+                    app:layout_constraintStart_toStartOf="@+id/imgDecChallengesEmpty"
+                    app:layout_constraintTop_toBottomOf="@+id/txvNoSavedChallenges"
+                    app:layout_constraintVertical_bias="0.13" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        style="@style/toolbar"
+        android:elevation="@dimen/toolbar_elevation">
+
+        <ImageView
+            android:id="@+id/imgGoBack"
+            style="@style/defaultImage"
+            android:layout_width="@dimen/toolbar_icon_size"
+            android:layout_height="@dimen/toolbar_icon_size"
+            android:layout_marginEnd="@dimen/toolbar_icon_margin"
+            app:srcCompat="@drawable/back_arrow"
+            android:contentDescription="@string/cdes_goBackButton"
+            tools:layout_editor_absoluteX="58dp"
+            tools:layout_editor_absoluteY="58dp" />
+
+        <TextView
+            android:id="@+id/txvFrameTitle"
+            style="@style/titleText"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="clip_horizontal"
+            android:text="@string/mnu_titleProfile" />
+    </androidx.appcompat.widget.Toolbar>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:context=".appFragments.HomeFragment">
+
+            <View
+                android:id="@+id/UserView"
+                style="@style/defaultView"
+                android:layout_height="330dp"
+                android:layout_marginTop="30dp"
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/imgUserProfile"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_marginTop="15dp"
+                android:scaleType="centerCrop"
+                android:contentDescription="@string/cdes_profileImage"
+                app:layout_constraintEnd_toEndOf="@+id/UserView"
+                app:layout_constraintStart_toStartOf="@+id/UserView"
+                app:layout_constraintTop_toTopOf="@+id/UserView"
+                app:srcCompat="@drawable/img_default_user_image" />
+
+            <TextView
+                android:id="@+id/txvUserName"
+                style="@style/titleText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@string/accountUserName"
+                app:layout_constraintBottom_toBottomOf="@+id/UserView"
+                app:layout_constraintEnd_toEndOf="@+id/UserView"
+                app:layout_constraintStart_toStartOf="@+id/UserView"
+                app:layout_constraintTop_toBottomOf="@+id/imgUserProfile"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <Button
+                android:id="@+id/btnRequest"
+                style="@style/basicColorButton"
+
+                android:layout_height="55dp"
+                android:layout_marginStart="40dp"
+                android:layout_marginEnd="40dp"
+                android:text="@string/btn_sendRequest"
+                android:contentDescription="@string/cdes_requestStatus"
+                app:layout_constraintBottom_toBottomOf="@+id/UserView"
+                app:layout_constraintEnd_toEndOf="@+id/UserView"
+                app:layout_constraintStart_toStartOf="@+id/UserView"
+                app:layout_constraintTop_toBottomOf="@+id/txvUserName"
+                app:layout_constraintVertical_bias="0.56" />
+
+            <View
+                android:id="@+id/accountInfoView"
+                style="@style/defaultView"
+                android:layout_height="290dp"
+                android:layout_marginTop="15dp"
+                android:visibility="visible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/UserView" />
+
+            <TextView
+                android:id="@+id/txvAccountInfoTitle"
+                style="@style/sectionText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/txv_Info"
+                app:layout_constraintBottom_toBottomOf="@+id/imgInfoView"
+                app:layout_constraintEnd_toEndOf="@+id/accountInfoView"
+                app:layout_constraintHorizontal_bias="0.03"
+                app:layout_constraintStart_toEndOf="@+id/imgInfoView"
+                app:layout_constraintTop_toTopOf="@+id/imgInfoView" />
+
+            <ImageView
+                android:id="@+id/imgInfoView"
+                style="@style/defaultImage"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="15dp"
+                app:layout_constraintStart_toStartOf="@+id/accountInfoView"
+                app:layout_constraintTop_toTopOf="@+id/accountInfoView"
+                app:srcCompat="@drawable/img_app_info" />
+
+            <TextView
+                android:id="@+id/txvNameProperty"
+                style="@style/normalText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="10dp"
+                android:text="@string/edt_name"
+                app:layout_constraintStart_toStartOf="@+id/accountInfoView"
+                app:layout_constraintTop_toBottomOf="@+id/txvAccountInfoTitle" />
+
+            <EditText
+                android:id="@+id/edtNameProperty"
+                style="@style/propertyEditText"
+                android:layout_marginTop="5dp"
+                android:ems="10"
+                android:enabled="false"
+                android:inputType="text"
+                android:hint="@string/accountName"
+                app:layout_constraintEnd_toEndOf="@+id/accountInfoView"
+                app:layout_constraintStart_toStartOf="@+id/accountInfoView"
+                app:layout_constraintTop_toBottomOf="@+id/txvNameProperty" />
+
+            <TextView
+                android:id="@+id/txvMailProperty"
+                style="@style/normalText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="20dp"
+                android:text="@string/edt_email"
+                app:layout_constraintStart_toStartOf="@+id/accountInfoView"
+                app:layout_constraintTop_toBottomOf="@+id/edtNameProperty" />
+
+            <EditText
+                android:id="@+id/edtMailProperty"
+                style="@style/propertyEditText"
+                android:layout_marginTop="5dp"
+                android:ems="10"
+                android:enabled="false"
+                android:inputType="textEmailAddress"
+                android:hint="@string/accountMail"
+                app:layout_constraintEnd_toEndOf="@+id/accountInfoView"
+                app:layout_constraintStart_toStartOf="@+id/accountInfoView"
+                app:layout_constraintTop_toBottomOf="@+id/txvMailProperty" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</LinearLayout>

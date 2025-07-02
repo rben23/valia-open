@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        style="@style/toolbar"
+        android:elevation="@dimen/toolbar_elevation">
+
+        <ImageView
+            android:id="@+id/imgGoBack"
+            style="@style/defaultImage"
+            android:layout_width="@dimen/toolbar_icon_size"
+            android:layout_height="@dimen/toolbar_icon_size"
+            android:layout_marginEnd="@dimen/toolbar_icon_margin"
+            android:contentDescription="@string/cdes_goBackButton"
+            app:srcCompat="@drawable/back_arrow"
+            tools:layout_editor_absoluteX="58dp"
+            tools:layout_editor_absoluteY="58dp" />
+
+        <TextView
+            android:id="@+id/txvFrameTitle"
+            style="@style/titleText"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="clip_horizontal"
+            android:text="@string/txv_showChallenge" />
+
+        <ImageView
+            android:id="@+id/imgEditChallenge"
+            style="@style/defaultImage"
+            android:contentDescription="@string/cdes_EditForm"
+            android:layout_width="@dimen/icon_small_size"
+            android:layout_height="@dimen/icon_small_size"
+            android:layout_gravity="end"
+            android:layout_marginEnd="@dimen/icon_margin_right"
+            app:srcCompat="@drawable/img_pencil_edit"
+            tools:layout_editor_absoluteX="58dp"
+            tools:layout_editor_absoluteY="58dp" />
+    </androidx.appcompat.widget.Toolbar>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:context=".appFragments.HomeFragment">
+
+
+            <View
+                android:id="@+id/challengeView"
+                style="@style/defaultView"
+                android:layout_width="0dp"
+                android:layout_height="520dp"
+                android:layout_marginTop="30dp"
+                android:visibility="visible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/txvChallengeTitle"
+                style="@style/sectionText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/txv_challengeTitle"
+                app:layout_constraintBottom_toBottomOf="@+id/imgChallengeView"
+                app:layout_constraintEnd_toEndOf="@+id/challengeView"
+                app:layout_constraintHorizontal_bias="0.03"
+                app:layout_constraintStart_toEndOf="@+id/imgChallengeView"
+                app:layout_constraintTop_toTopOf="@+id/imgChallengeView" />
+
+            <ImageView
+                android:id="@+id/imgChallengeView"
+                style="@style/defaultImage"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="15dp"
+                app:layout_constraintStart_toStartOf="@+id/challengeView"
+                app:layout_constraintTop_toTopOf="@+id/challengeView"
+                app:srcCompat="@drawable/challenge_icon" />
+
+            <TextView
+                android:id="@+id/txvNameProperty"
+                style="@style/normalText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="20dp"
+                android:text="@string/edt_NameChallenge"
+                app:layout_constraintStart_toStartOf="@+id/challengeView"
+                app:layout_constraintTop_toBottomOf="@+id/txvChallengeTitle" />
+
+            <EditText
+                android:id="@+id/edtNameProperty"
+                style="@style/propertyEditText"
+                android:ems="10"
+                android:enabled="false"
+                android:hint="@string/edt_NameChallenge"
+                android:inputType="text"
+                app:layout_constraintEnd_toEndOf="@+id/challengeView"
+                app:layout_constraintStart_toStartOf="@+id/challengeView"
+                app:layout_constraintTop_toBottomOf="@+id/txvNameProperty" />
+
+            <TextView
+                android:id="@+id/txvKmProperty"
+                style="@style/normalText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="20dp"
+                android:text="@string/txv_kmChallenge"
+                app:layout_constraintStart_toStartOf="@+id/challengeView"
+                app:layout_constraintTop_toBottomOf="@+id/edtNameProperty" />
+
+            <EditText
+                android:id="@+id/edtKmProperty"
+                style="@style/propertyEditText"
+                android:ems="10"
+                android:enabled="false"
+                android:hint="@string/edt_kmChallenge"
+                android:inputType="numberDecimal"
+                app:layout_constraintEnd_toEndOf="@+id/challengeView"
+                app:layout_constraintStart_toStartOf="@+id/challengeView"
+                app:layout_constraintTop_toBottomOf="@+id/txvKmProperty" />
+
+            <TextView
+                android:id="@+id/txvUserProperty"
+                style="@style/normalText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="20dp"
+                android:text="@string/edt_userChallenge"
+                app:layout_constraintStart_toStartOf="@+id/challengeView"
+                app:layout_constraintTop_toBottomOf="@+id/edtKmProperty" />
+
+            <Spinner
+                android:id="@+id/spnUserProperty"
+                style="@style/propertyEditText"
+                android:enabled="false"
+                app:layout_constraintEnd_toEndOf="@+id/challengeView"
+                app:layout_constraintStart_toStartOf="@+id/challengeView"
+                app:layout_constraintTop_toBottomOf="@+id/txvUserProperty" />
+
+            <TextView
+                android:id="@+id/txvIniDateProperty"
+                style="@style/normalText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="20dp"
+                android:text="@string/edt_dateChallenge"
+                app:layout_constraintStart_toStartOf="@+id/challengeView"
+                app:layout_constraintTop_toBottomOf="@+id/spnUserProperty" />
+
+            <EditText
+                android:id="@+id/edtIniDateProperty"
+                style="@style/propertyEditText"
+                android:ems="10"
+                android:enabled="false"
+                android:hint="@string/edt_dateChallenge"
+                android:inputType="datetime"
+                app:layout_constraintEnd_toEndOf="@+id/challengeView"
+                app:layout_constraintStart_toStartOf="@+id/challengeView"
+                app:layout_constraintTop_toBottomOf="@+id/txvIniDateProperty" />
+
+
+            <View
+                android:id="@+id/deleteChallengeView"
+                style="@style/defaultView"
+                android:layout_height="180dp"
+                android:layout_marginTop="15dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/challengeView" />
+
+            <TextView
+                android:id="@+id/txvDelete"
+                style="@style/sectionText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/txv_deleteChallenge"
+                app:layout_constraintBottom_toBottomOf="@+id/imgDelete"
+                app:layout_constraintEnd_toEndOf="@+id/deleteChallengeView"
+                app:layout_constraintHorizontal_bias="0.03"
+                app:layout_constraintStart_toEndOf="@+id/imgDelete"
+                app:layout_constraintTop_toTopOf="@+id/imgDelete" />
+
+            <ImageView
+                android:id="@+id/imgDelete"
+                style="@style/defaultImage"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="15dp"
+                app:layout_constraintStart_toStartOf="@+id/deleteChallengeView"
+                app:layout_constraintTop_toTopOf="@+id/deleteChallengeView"
+                app:srcCompat="@drawable/img_app_bin" />
+
+            <Button
+                android:id="@+id/btnDelete"
+                style="@style/basicColorButton"
+                android:contentDescription="@string/cdes_deleteChallenge"
+                android:text="@string/btn_delete"
+                app:layout_constraintBottom_toBottomOf="@+id/deleteChallengeView"
+                app:layout_constraintEnd_toEndOf="@+id/deleteChallengeView"
+                app:layout_constraintStart_toStartOf="@+id/deleteChallengeView"
+                app:layout_constraintTop_toBottomOf="@+id/txvDelete"
+                app:layout_constraintVertical_bias="0.68" />
+
+            <Button
+                android:id="@+id/btnSave"
+                style="@style/basicColorButton"
+                android:layout_marginTop="15dp"
+
+                android:contentDescription="@string/cdes_saveChallenge"
+                android:text="@string/btn_save"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.491"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/deleteChallengeView" />
+
+            <Button
+                android:id="@+id/btnCancel"
+                style="@style/transparentButton"
+                android:layout_marginTop="10dp"
+
+                android:contentDescription="@string/cdes_cancelEditChallenge"
+                android:layout_marginBottom="30dp"
+                android:text="@string/btn_cancel"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.492"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btnSave" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</LinearLayout>
