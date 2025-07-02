@@ -10,6 +10,7 @@
 
 - Registro y autenticación de usuarios con Firebase 🔐
 - Creación de rutas y visualización en mapa 🗺️
+- Modo Landscape para rutas sin distracciones (Silencia el dispositivo y desactiva la información) 🌳
 - Registro de actividades deportivas (carrera, ciclismo, etc.) 🏃‍♀️🚴
 - Sistema social y chat para hablar con amigos y enviar rutas 👥
 - Pantalla de retos para competir con las amistades en base a los Kilómetros realizados 🏅
@@ -22,7 +23,7 @@
 | Categoría     | Tecnologías                 |
 |---------------|-----------------------------|
 | Lenguaje      | Java                        |
-| BD Red        | Firebase (Auth + Database)  |
+| BD Remote     | Firebase (Auth + Database)  |
 | BD Local      | SQLite                      |
 | Mapas         | OpenStreetMap               |
 
@@ -30,10 +31,10 @@
 
 ## 📸 Capturas de pantalla
 
-
+> 🔒 Las imágenes han sido omitidas en esta versión pública. Si deseas ver una demo visual, no dudes en contactar conmigo.
 
 ---
 
 ## 🧪 ¿Cómo ejecutar este proyecto?
 
-> ⚠️ Debes vincular Firebase con este proyecto para poder ejecutarlo
+> ⚙️ Debes vincular Firebase con este proyecto para poder ejecutarlo
